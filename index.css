@@ -1,0 +1,100 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    text-align: center;
+    padding: 10px;
+}
+
+.video-container {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+
+.video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.filter-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.action-cont {
+    position: absolute;
+    background-color: lightgrey;
+    height: 12rem;
+    width: 5rem;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    top: calc((100vh - 12rem) / 2);
+    right: 5rem;
+}
+
+.record-btn, .capture-btn {
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.record-btn {
+    background-color: red;
+}
+
+.capture-btn {
+    background-color: green;
+}
+
+.timer-cont {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.timer-head {
+    color: blue;
+    font-size: 1.5rem;
+}
+
+.filter-cont {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.filter {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.orange { background-color: rgba(255, 165, 0, 0.5); }
+.blue { background-color: rgba(0, 0, 255, 0.5); }
+.green { background-color: rgba(0, 128, 0, 0.5); }
+.transparent { background-color: transparent; border: 2px solid gray; }
